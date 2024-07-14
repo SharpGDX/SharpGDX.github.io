@@ -2,10 +2,9 @@ title: Just the Docs Template
 description: A starter template for a Jeykll site using the Just the Docs theme!
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://sharpgdx.com
 
 color_scheme: dark
-
 enable_copy_code_button: true
 
 aux_links:
