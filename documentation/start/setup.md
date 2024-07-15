@@ -1,5 +1,5 @@
 ---
-title: "Set Up a Development Environment"
+title: "Setup an IDE"
 description: "Before you can get your first SharpGDX project up and running, you need to set up your development environment. The first step in doing this is choosing an IDE: Visual Studio or Rider are among the most common choices for this."
 layout: home
 ---
@@ -10,19 +10,19 @@ Before you can get started with SharpGDX, you need to set up an IDE (Integrated 
 
 There are several IDEs available for C# development, the most common being Visual Studio and Rider, both which have free versions for open source or non-commercial projects.
 
-## (1.) Visual Studio
+## 1. Visual Studio
 
 - IDE itself: [Visual Sutdio](https://www.visualstudio.com/downloads) (the "Community" edition is sufficient)
 
-## (2.) Rider
+## 2. Rider
 
 - Coming soon...
 
-## (3.) Visual Studio Code
+## 3. Visual Studio Code
 
 - Coming soon...
 
-## (4.) No IDE
+## 4. No IDE
 
 It is possible to develop sharpGDX applications entirely without an iDE, just using a simple editor like Notepad. This approach is **not** recommended, and will not be outlined here.
 {: .notice--info}
