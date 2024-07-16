@@ -7,3 +7,13 @@ nav_enabled: true
 enable_copy_code_button: true
 footer_content: "Copyright &copy; 2024 SharpGDX."
 color_scheme: dark
+
+collections:
+    mathematics:
+      permalink: "/:collection/:path/"
+      output: true
+just_the_docs:
+    collections:
+      mathematics:
+        name: Mathematics
+        nav_fold: true      
