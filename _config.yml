@@ -12,8 +12,14 @@ collections:
     mathematics:
       permalink: "/:collection/:path/"
       output: true
+    getting-started:
+      permalink: "/:collection/:path/"
+      output: true
 just_the_docs:
     collections:
       mathematics:
         name: Mathematics
-        nav_fold: true      
+        nav_fold: true   
+      getting-started:
+        name: Getting Started
+        nav_fold: true

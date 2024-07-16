@@ -1,6 +1,7 @@
 ---
 title: "Circles, planes, rays, etc."
 layout: home
+nav_order: 2
 ---
 
 SharpGDX has several geometric classes for dealing with shapes, areas, and volumes. These include:

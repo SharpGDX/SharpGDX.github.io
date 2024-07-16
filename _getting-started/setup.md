@@ -2,6 +2,7 @@
 title: "Setup an IDE"
 description: "Before you can get your first SharpGDX project up and running, you need to set up your development environment. The first step in doing this is choosing an IDE: Visual Studio or Rider are among the most common choices for this."
 layout: home
+nav_order: 0
 ---
 
 If this is your first time using SharpGDX, you're at the right place. The following steps detail how you can get your first SharpGDX project up and running.

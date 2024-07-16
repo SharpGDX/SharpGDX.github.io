@@ -1,6 +1,7 @@
 ---
 title: "Math Utilities"
 layout: home
+nav_order: 1
 ---
 
 The [Mathematics](https://github.com/sharpgdx/sharpgdx/tree/master/gdx/src/com/badlogic/gdx/math) package contains various useful classes for dealing with problems in geometry, linear algebra, collision detection, interpolation, and common unit conversions.
