@@ -28,8 +28,8 @@ Vector3 vec = new Vector3(x2, y2, z2).Sub(x1, y1, z1).Nor();
 
 A new Vector3 is instantiated with the second point coordinates, the first point is subtracted from this, and the result is normalized. This is of course equivalent to:
 
-```cs
-Vector3 vec = new Vector3(x2, y2, z2);	// new vector at (x2, y2, z2)
+```csharp
+var vec = new Vector3(x2, y2, z2);	// new vector at (x2, y2, z2)
 vec.Sub(x1, y1, z1);					// subtract point (x1, y1, z1)
 vec.Nor();								// normalize result
 ```
