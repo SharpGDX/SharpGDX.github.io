@@ -22,4 +22,9 @@ just_the_docs:
         nav_fold: true
       mathematics:
         name: Mathematics
-        nav_fold: true         
+        nav_fold: true      
+        
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
