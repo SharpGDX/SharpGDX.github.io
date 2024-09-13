@@ -31,7 +31,7 @@ A new Vector3 is instantiated with the second point coordinates, the first point
 ```csharp
 var vec = new Vector3(x2, y2, z2);	// new vector at (x2, y2, z2)
 vec.Sub(x1, y1, z1);			// subtract point (x1, y1, z1)
-vec.Nor();					// normalize result
+vec.Nor();				// normalize result
 ```
 
 ----
