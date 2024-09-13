@@ -22,9 +22,9 @@ There are currently 3 implementations of the IPath interface (the splines), thes
 Splines can be used statically like this:
 
 ```csharp
-    Vector2 o = new Vector2();
-    Vector2 tmp = new Vector2();
-    Vector2[] dataSet = new Vector2[size];
+    var o = new Vector2();
+    var tmp = new Vector2();
+    var dataSet = new Vector2[size];
 
     /* fill dataSet with path points */
     CatmullRomSpline.Calculate(o, t, dataSet, continuous, tmp);// stores in the vector o the point of the catmullRom path of the dataSet in the time t. Uses tmp as a temporary vector. if continuous is true, the path is a loop.
@@ -34,8 +34,8 @@ Splines can be used statically like this:
 or they can be stored like this:
 
 ```csharp
-    CatmullRomSpline<Vector2> myCatmull = new CatmullRomSpline<Vector2>(dataSet, true);
-    Vector2 o = new Vector2();
+    var myCatmull = new CatmullRomSpline<Vector2>(dataSet, true);
+    var o = new Vector2();
     
     myCatmull.ValueAt(o, t);
     myCatmull.DerivativeAt(o, t);
@@ -52,10 +52,10 @@ This is often done at loading time, where you load the data set, calculates the 
 ```csharp
 /*members*/
     int _k = 100; //increase _k for more fidelity to the spline
-    Vector2[] _points = new Vector2[k];
+    var _points = new Vector2[k];
 
 /*Init()*/
-    CatmullRomSpline<Vector2> myCatmull = new CatmullRomSpline<Vector2>(dataSet, true);
+    var myCatmull = new CatmullRomSpline<Vector2>(dataSet, true);
     
     for(var i = 0; i < k; ++i)
     {
@@ -70,9 +70,9 @@ How to render the spline previously cached
 
 ```csharp
 /*members*/
-    int _k = 100; //increase _k for more fidelity to the spline
-    Vector2[] _points = new Vector2[_k];
-    ShapeRenderer _shapeRenderer;
+    private int _k = 100;   // increase _k for more fidelity to the spline
+    private Vector2[] _points = new Vector2[_k];
+    private ShapeRenderer _shapeRenderer;
 
 /*Render()*/
     _shapeRenderer.Begin(ShapeType.Line);

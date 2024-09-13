@@ -55,9 +55,9 @@ Matrix4 mat = new Matrix4().SetToRotation(axis, angle).trn(x, y, z);
 This is of course equivalent to:
 
 ```csharp
-var mat = new Matrix4();	// new identity matrix
-mat.SetToRotation(axis, angle);	// set rotation from axis-angle pair
-mat.Translate(x, y, z);		// translate by x, y, z
+var mat = new Matrix4();		// new identity matrix
+mat.SetToRotation(axis, angle);		// set rotation from axis-angle pair
+mat.Translate(x, y, z);			// translate by x, y, z
 ```
 
 ### Native Methods
