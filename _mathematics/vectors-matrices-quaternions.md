@@ -28,15 +28,16 @@ Vector3 vec = new Vector3(x2, y2, z2).Sub(x1, y1, z1).Nor();
 
 A new Vector3 is instantiated with the second point coordinates, the first point is subtracted from this, and the result is normalized. This is of course equivalent to:
 
-```csharp
-var vec = new Vector3(x2, y2, z2);	// new vector at (x2, y2, z2)
-vec.Sub(x1, y1, z1);					// subtract point (x1, y1, z1)
-vec.Nor();								// normalize result
-```
-
-<div class="language-csharp highlighter-rouge"><div class="highlight"><pre style="font-family:Cascadia Mono;font-size:13px;color:gainsboro;background:#1e1e1e;" class="highlight"><code><span style="color:#569cd6;">var</span>&nbsp;<span style="color:#9cdcfe;">vec</span>&nbsp;<span style="color:#b4b4b4;">=</span>&nbsp;<span style="color:#569cd6;">new</span>&nbsp;<span style="color:#4ec9b0;">Vector3</span>(<span style="color:#9cdcfe;">x2</span>,&nbsp;<span style="color:#9cdcfe;">y2</span>,&nbsp;<span style="color:#9cdcfe;">z2</span>);&nbsp;<span style="color:#57a64a;">//&nbsp;new&nbsp;vector&nbsp;at&nbsp;(x2,&nbsp;y2,&nbsp;z2)</span>
-		<span style="color:#9cdcfe;">vec</span><span style="color:#b4b4b4;">.</span><span style="color:#dcdcaa;">sub</span>(<span style="color:#9cdcfe;">x1</span>,&nbsp;<span style="color:#9cdcfe;">y1</span>,&nbsp;<span style="color:#9cdcfe;">z1</span>);&nbsp;<span style="color:#57a64a;">//&nbsp;subtract&nbsp;point&nbsp;(x1,&nbsp;y1,&nbsp;z1)</span>
-		<span style="color:#9cdcfe;">vec</span><span style="color:#b4b4b4;">.</span><span style="color:#dcdcaa;">nor</span>();</code></pre></div>
+<div class="language-csharp highlighter-rouge">
+<div class="highlight">
+<pre style="font-family:Cascadia Mono;font-size:13px;color:gainsboro;background:#1e1e1e;" class="highlight">
+<code>
+<span style="color:#569cd6;">var</span>&nbsp;<span style="color:#9cdcfe;">vec</span>&nbsp;<span style="color:#b4b4b4;">=</span>&nbsp;<span style="color:#569cd6;">new</span>&nbsp;<span style="color:#4ec9b0;">Vector3</span>(<span style="color:#9cdcfe;">x2</span>,&nbsp;<span style="color:#9cdcfe;">y2</span>,&nbsp;<span style="color:#9cdcfe;">z2</span>);&nbsp;<span style="color:#57a64a;">//&nbsp;new&nbsp;vector&nbsp;at&nbsp;(x2,&nbsp;y2,&nbsp;z2)</span>
+		<span style="color:#9cdcfe;">vec</span>
+		<span style="color:#b4b4b4;">.</span><span style="color:#dcdcaa;">sub</span>(<span style="color:#9cdcfe;">x1</span>,&nbsp;<span style="color:#9cdcfe;">y1</span>,&nbsp;<span style="color:#9cdcfe;">z1</span>);&nbsp;<span style="color:#57a64a;">//&nbsp;subtract&nbsp;point&nbsp;(x1,&nbsp;y1,&nbsp;z1)</span>
+		<span style="color:#9cdcfe;">vec</span>
+		<span style="color:#b4b4b4;">.</span>
+		<span style="color:#dcdcaa;">nor</span>();</code></pre></div>
 		<button type="button" aria-label="Copy code to clipboard"><svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copy"></use></svg></button>
 		</div>
 
