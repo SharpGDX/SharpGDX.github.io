@@ -23,15 +23,15 @@ A vector is an array of numbers used to describe a concept with a direction and 
 A pattern also found elsewhere in SharpGDX is the use of method chaining for convenience and reduced typing. Each operation which modifies a vector returns a reference to that vector to continue chaining operations in the same line call. The following example creates a unit vector pointing along the direction from a point _(x1, y1, z1)_ to another point _(x2, y2, z2)_:
 
 ```csharp
-var vec = new Vector3(x2, y2, z2).Sub(x1, y1, z1).Nor();
+var vec = new Vector3(x2, y2, z2).Subtract(x1, y1, z1).Normalize();
 ```
 
 A new Vector3 is instantiated with the second point coordinates, the first point is subtracted from this, and the result is normalized. This is of course equivalent to:
 
 ```csharp
 var vec = new Vector3(x2, y2, z2);	// new vector at (x2, y2, z2)
-vec.Sub(x1, y1, z1);			// subtract point (x1, y1, z1)
-vec.Nor();				// normalize result
+vec.Subtract(x1, y1, z1);			// subtract point (x1, y1, z1)
+vec.Normalize();				// normalize result
 ```
 
 ----
@@ -55,9 +55,9 @@ Matrix4 mat = new Matrix4().SetToRotation(axis, angle).trn(x, y, z);
 This is of course equivalent to:
 
 ```csharp
-Matrix4 mat = new Matrix4();	// new identity matrix
+var mat = new Matrix4();	// new identity matrix
 mat.SetToRotation(axis, angle);	// set rotation from axis-angle pair
-mat.Trn(x, y, z);				// translate by x, y, z
+mat.Translate(x, y, z);		// translate by x, y, z
 ```
 
 ### Native Methods
@@ -65,9 +65,9 @@ mat.Trn(x, y, z);				// translate by x, y, z
 The matrix classes have a number of their operations available in static methods backed by fast native code. While member syntax is often easier to read and more convenient to write, these static methods should be used in areas where performance is a concern. The following example uses one of these methods to perform a multiplication between two 4x4 matrices:
 
 ```csharp
-Matrix4 matA;
-Matrix4 matB;
-Matrix4.Mul(matA.Val, matB.Val);	// the result is stored in matA
+var matA = new Matrix4();
+var matB = new Matrix4();
+Matrix4.Multiply(matA.Val, matB.Val);	// the result is stored in matA
 ```
 
 Notice the use of `.val` to access the underlying `float` array which backs each matrix. The native methods work directly on these arrays. The above is functionally equivalent to the member syntax:
