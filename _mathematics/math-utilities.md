@@ -8,7 +8,7 @@ The [Mathematics](https://github.com/sharpgdx/sharpgdx/tree/master/gdx/src/com/b
 
 ## Math Utils
 
-The [Math Utils](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/math/MathUtils.html)  [(code)](https://github.com/sharpgdx/sharpgdx/blob/master/gdx/src/com/badlogic/gdx/math/MathUtils.java) class covers a number of useful odds and ends. There is a handy static `Random` member to avoid instantiating one in your own code. Using the same random instance throughout your code can also ensure consistently deterministic behavior as long as you store the seed value used. There are constants for conversion between radians and degrees as well as look-up tables for the sine and cosine functions. There are also `float` versions of common `java.lang.Math` functions to avoid having to cast down from `double`.
+The [Math Utils](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/math/MathUtils.html)  [(code)](https://github.com/sharpgdx/sharpgdx/blob/master/gdx/src/com/badlogic/gdx/math/MathUtils.java) class covers a number of useful odds and ends. There is a handy static `Random` member to avoid instantiating one in your own code. Using the same random instance throughout your code can also ensure consistently deterministic behavior as long as you store the seed value used. There are constants for conversion between radians and degrees as well as look-up tables for the sine and cosine functions. There are also `float` versions of common `System.Math` functions to avoid having to cast down from `double`.
 
 ## Catmull-Rom Spline
 

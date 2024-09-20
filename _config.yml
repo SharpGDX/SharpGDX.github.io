@@ -20,6 +20,9 @@ just_the_docs:
       getting-started:
         name: Getting Started
         nav_fold: true
+      framework:
+        name: Framework
+        nav_fold: true      
       mathematics:
         name: Mathematics
         nav_fold: true      

@@ -27,8 +27,8 @@ Splines can be used statically like this:
     var dataSet = new Vector2[size];
 
     /* fill dataSet with path points */
-    CatmullRomSpline.Calculate(o, t, dataSet, continuous, tmp);// stores in the vector o the point of the catmullRom path of the dataSet in the time t. Uses tmp as a temporary vector. if continuous is true, the path is a loop.
-    CatmullRomSpline.Derivative(o, t, dataSet, continuous, tmp); // the same as above, but stores the derivative of the time t in the vector o.
+    CatmullRomSpline.Calculate(o, t, dataSet, continuous, tmp); // stores in the vector o the point of the catmullRom path of the dataSet in the time t. Uses tmp as a temporary vector. if continuous is true, the path is a loop.
+    CatmullRomSpline.Derivative(o, t, dataSet, continuous, tmp);    // the same as above, but stores the derivative of the time t in the vector o.
 ```
 
 or they can be stored like this:
@@ -51,8 +51,8 @@ This is often done at loading time, where you load the data set, calculates the 
 
 ```csharp
 /*members*/
-    int _k = 100; //increase _k for more fidelity to the spline
-    var _points = new Vector2[k];
+    private int _k = 100;   //increase _k for more fidelity to the spline
+    private Vector2 _points = new Vector2[k];
 
 /*Init()*/
     var myCatmull = new CatmullRomSpline<Vector2>(dataSet, true);
@@ -77,7 +77,7 @@ How to render the spline previously cached
 /*Render()*/
     _shapeRenderer.Begin(ShapeType.Line);
     
-    for(int i = 0; i < _k - 1; ++i)
+    for (int i = 0; i < _k - 1; ++i)
     {
         _shapeRenderer.Line(_points[i], _points[i + 1]);
     }
@@ -89,19 +89,22 @@ How to render the spline previously cached
 
 Do everything at render stage
 
-```java
+```csharp
 /*members*/
-    int k = 100; //increase k for more fidelity to the spline
-    CatmullRomSpline<Vector2> myCatmull = new CatmullRomSpline<Vector2>(dataSet, true);
-    Vector2 out = new Vector2();
-    ShapeRenderer shapeRenderer;
+    private int _k = 100;    //increase k for more fidelity to the spline
+    private CatmullRomSpline<Vector2> _myCatmull = new CatmullRomSpline<Vector2>(dataSet, true);
+    private Vector2 _out = new Vector2();
+    private ShapeRenderer _shapeRenderer;
+
 /*render()*/
-    shapeRenderer.begin(ShapeType.Line);
-    for(int i = 0; i < k-1; ++i)
+    _shapeRenderer.begin(ShapeType.Line);
+    
+    for (int i = 0; i < _k - 1; ++i)
     {
-        shapeRenderer.line(myCatmull.valueAt(points[i], ((float)i)/((float)k-1)), myCatmull.valueAt(points[i+1], ((float)(i+1))/((float)k-1)));
+        _shapeRenderer.line(_myCatmull.valueAt(_points[i], ((float)i)/((float)_k - 1)), _myCatmull.valueAt(_points[i+1], ((float)(i + 1))/((float)_k - 1)));
     }
-    shapeRenderer.end();
+
+    _shapeRenderer.end();
 ```
 
 ### Make sprite traverse through the cached path
@@ -144,20 +147,24 @@ Calculate sprite position on the path every frame, so it looks much more pleasan
     float current = 0;
     Vector2 out = new Vector2();
 /*render()*/
-    current += Gdx.graphics.getDeltaTime() * speed;
-    if(current >= 1)
+    _current += GDX.Graphics.GetDeltaTime() * _speed;
+    
+    if (current >= 1)
+    {
         current -= 1;
-    myCatmull.valueAt(out, current);
-    batch.draw(sprite, out.x, out.y);
+    }
+
+    _myCatmull.valueAt(_out, _current);
+    batch.draw(sprite, _out.x, _out.y);
 ```
 
 ### Make sprite look at the direction of the spline
 
 The angle can be found when applying the atan2 function to the normalised tangent(derivative) of the curve.
 
-```java
-    myCatmull.derivativeAt(out, current);
-    float angle = out.angle();
+```csharp
+    _myCatmull.derivativeAt(_out, _current);
+    float angle = _out.angle();
 ```
 
 ### Make the sprite traverse at constant speed
@@ -166,8 +173,8 @@ As the arc-length of the spline through the dataSet points is not constant, when
 We can easily do this by dividing the speed by the length of the rate of change.
 Instead of
 
-```java
-    current += Gdx.graphics.getDeltaTime() * speed;
+```csharp
+    _current += GDX.Graphics.GetDeltaTime() * _speed;
 ```
 
 change to:
