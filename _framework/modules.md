@@ -55,7 +55,7 @@ The following snippet clears the screen and paints it with red.
 gl.glClearColor(1f, 0.0f, 0.0f, 1);
 gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 ```
-It always returns the specific implementation of the API (lwjgl, jogl or android), so the main application doesn’t need to know specifics and will work across the whole range of platforms if supported.
+It always returns the specific implementation of the API (lwjgl, jogl or android), so the main application doesn't need to know specifics and will work across the whole range of platforms if supported.
 
 The following API versions are supported:
 
