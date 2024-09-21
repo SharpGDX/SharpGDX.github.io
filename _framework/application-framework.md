@@ -1,58 +1,46 @@
 ---
-title: Life Cycle
+title: Application Framework
 layout: home
-nav_order: 2
+nav_order: 1
 ---
-A SharpGDX application has a well defined life-cycle, governing the states of an application, like creating, pausing and resuming, rendering and disposing the application.
+## Modules
+At its core, SharpGDX consists of six [modules](/wiki/app/modules-overview) in the form of interfaces that provide means to interact with the operating system. Each backend implements these interfaces.
 
-## IApplicationListener
-An application developer hooks into these life-cycle events by implementing the [ApplicationListener](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/ApplicationListener.html) interface and passing an instance of that implementation to the `Application` implementation of a specific back-end (see [The Application Framework](/wiki/app/the-application-framework)). From there on, the `Application` will call the `ApplicationListener` every time an application level event occurs. A bare-bones `ApplicationListener` implementation may look like this:
+  * *[Application](https://github.com/sharpgdx/sharpgdx/tree/master/gdx/src/com/badlogic/gdx/Application.java)*: runs the application and informs an API client about application level events, such as window resizing. Provides logging facilities and querying methods, e.g., memory usage.
+  * *[Files](https://github.com/sharpgdx/sharpgdx/tree/master/gdx/src/com/badlogic/gdx/Files.java)*: exposes the underlying file system(s) of the platform. Provides an abstraction over different types of file locations on top of a custom file handle system (which does not inter-operate with Java's File class).
+  * *[Input](https://github.com/sharpgdx/sharpgdx/tree/master/gdx/src/com/badlogic/gdx/Input.java)*: informs the API client of user input such as mouse, keyboard, touch or accelerometer events. Both polling and event driven processing are supported.
+  * *[Net](https://github.com/sharpgdx/sharpgdx/tree/master/gdx/src/com/badlogic/gdx/Net.java)*: provides means to access resources via HTTP/HTTPS in a cross-platform way, as well as create TCP server and client sockets.
+  * *[Audio](https://github.com/sharpgdx/sharpgdx/tree/master/gdx/src/com/badlogic/gdx/Audio.java)*: provides means to playback sound effects and streaming music as well as directly accessing audio devices for PCM audio input/output.
+  * *[Graphics](https://github.com/sharpgdx/sharpgdx/tree/master/gdx/src/com/badlogic/gdx/Graphics.java)*: exposes OpenGL ES 2.0 (where available) and allows querying/setting video modes and similar things.
+
+## Starter Classes
+The only platform specific code that needs to be written, are so called [starter classes](/wiki/app/starter-classes-and-configuration). For each platform that is targeted, a piece of code will instantiate a concrete implementation of the IApplication interface, provided by the back-end for the platform. For the desktop, this might look something like this, using the Desktop backend:
 
 ```csharp
-public class MyGame : IApplicationListener
+public class DesktopLauncher
 {
-	public void Create() 
-	{
-	}
-	
-	public void Render() 
-	{
-	}
-
-	public void Resize(int width, int height)
-	{
-	}
-	
-	public void Pause() 
-	{
-	}
-	
-	public void Resume() 
-	{
-	}
-	
-	public void Dispose() 
-	{
-	}
+    public static void main(string[] args)
+    {
+        var config = new DesktopApplicationConfiguration();
+        new DesktopApplication(new MyGdxGame(), config);
+   }
 }
 ```
 
-One can also derive from the [ApplicationAdapter](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/ApplicationAdapter.html) class, which provides empty default implementations for those methods.
+These two classes usually live in separate projects, e.g., a desktop and an Android project. The [Project Generation](/wiki/start/project-generation) page describes the layout of these projects.
 
-Once passed to the `IApplication`, the `IApplicationListener` methods will be called as follows:
+The actual code of the application is located in a class that implements the [ApplicationListener](https://github.com/sharpgdx/sharpgdx/tree/master/gdx/src/com/badlogic/gdx/ApplicationListener.java) interface (MyGame in the above example). An instance of this class is passed to the respective initialization methods of each back-end's Application implementation (see above). The application will then call into the methods of the ApplicationListener at appropriate times (see [The Life-Cycle](/wiki/app/the-life-cycle)).
 
-| Method signature | Description |
-| ---------------- | ----------- |
-| `Create()` | Method called once when the application is created.|
-| `Resize(int width, int height)` | This method is called every time the game screen is re-sized and the game is not in the paused state. It is also called once just after the `create()` method.<br/> The parameters are the new width and height the screen has been resized to in pixels.|
-| `Render()` | Method called by the game loop from the application every time rendering should be performed. Game logic updates are usually also performed in this method.|
-| `Pause()` | On Android this method is called when the Home button is pressed or an incoming call is received. On desktop this is called when the window is minimized and just before `dispose()` when exiting the application.<br/> A good place to save the game state.|
-| `Resume()` | This method is called on Android, when the application resumes from a paused state, and on desktop when unminimized.|
-| `Dispose()` | Called when the application is destroyed. It is preceded by a call to `pause()`.|
+See [Starter Classes & Configuration](/wiki/app/starter-classes-and-configuration) for details on starter classes.
 
-The following diagram illustrates the life-cycle visually:
+## Accessing Modules
+The modules described earlier can be accessed via static fields of the [Gdx class](https://github.com/sharpgdx/sharpgdx/tree/master/gdx/src/com/badlogic/gdx/Gdx.java). This is essentially a set of global variables that allows easy access to any module of SharpGDX. While generally viewed as bad coding practice, we decided on using this mechanism to ease the pain usually associated with passing around references to things that are used often in all kinds of places within the code base.
 
-![images/70efff32-dd28-11e3-9fc4-1eb57143aee6.png](/assets/images/70efff32-dd28-11e3-9fc4-1eb57143aee6.png)
+To access, for example, the audio module one can simply write the following:
 
-## Where is the main loop?
-SharpGDX is event driven by nature, mostly due to the way Android and Javascript work. An explicit main loop does not exist, however, the `IApplicationListener.Render()` method can be regarded as the body of such a main loop.
+```csharp
+    // creates a new AudioDevice to which 16-bit PCM samples can be written
+    var audioDevice = GDX.Audio.NewAudioDevice(44100, false);
+```
+
+`Gdx.audio` is a reference to the backend implementation that has been instantiated on application startup by the Application instance. Other modules are accessed in the same fashion, e.g., `Gdx.app` to get the Application, `Gdx.files` to access the Files implementation and so on.
