@@ -15,6 +15,9 @@ collections:
     framework:
       permalink: "/:collection/:path/"
       output: true
+    audio:
+      permalink: "/:collection/:path/"
+      output: true
     mathematics:
       permalink: "/:collection/:path/"
       output: true
@@ -25,7 +28,10 @@ just_the_docs:
         nav_fold: true
       framework:
         name: Framework
-        nav_fold: true      
+        nav_fold: true   
+      audio:
+        name: Audio
+        nav_fold: true   
       mathematics:
         name: Mathematics
         nav_fold: true      
