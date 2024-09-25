@@ -18,7 +18,40 @@ collections:
     audio:
       permalink: "/:collection/:path/"
       output: true
+    deployment:
+      permalink: "/:collection/:path/"
+      output: true
+    extensions:
+      permalink: "/:collection/:path/"
+      output: true
+    files:
+      permalink: "/:collection/:path/"
+      output: true
+    graphics:
+      permalink: "/:collection/:path/"
+      output: true
+    input:
+      permalink: "/:collection/:path/"
+      output: true
+    internationalization-and-localization:
+      permalink: "/:collection/:path/"
+      output: true
+    asset-management:
+      permalink: "/:collection/:path/"
+      output: true
     mathematics:
+      permalink: "/:collection/:path/"
+      output: true
+    networking:
+      permalink: "/:collection/:path/"
+      output: true
+    preferences:
+      permalink: "/:collection/:path/"
+      output: true
+    tools:
+      permalink: "/:collection/:path/"
+      output: true
+    utilities:
       permalink: "/:collection/:path/"
       output: true
 just_the_docs:
@@ -32,9 +65,42 @@ just_the_docs:
       audio:
         name: Audio
         nav_fold: true   
+      deployment:
+        name: Deployment
+        nav_fold: true  
+      extensions:
+        name: Extensions
+        nav_fold: true  
+      files:
+        name: Files
+        nav_fold: true  
+      graphics:
+        name: Graphics
+        nav_fold: true      
+      input:
+        name: Input
+        nav_fold: true      
+      internationalization-and-localization:
+        name: Internationalization and Localization
+        nav_fold: true      
+      asset-management:
+        name: Assets
+        nav_fold: true      
       mathematics:
         name: Mathematics
         nav_fold: true      
+      networking:
+        name: Networking
+        nav_fold: true      
+      preferences:
+        name: Preferences
+        nav_fold: true    
+      tools:
+        name: Tools
+        nav_fold: true   
+      utilities:
+        name: Utilities
+        nav_fold: true   
         
 kramdown:
   syntax_highlighter_opts:
