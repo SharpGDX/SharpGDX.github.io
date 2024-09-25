@@ -29,7 +29,7 @@ music.Pause();				// pauses the playback
 music.Play();				// resumes the playback
 var isPlaying = music.IsPlaying;	// obvious :)
 var isLooping = music.IsLooping;	// obvious as well :)
-var position = music.Position;		 // returns the playback position in seconds
+var position = music.Position;		// returns the playback position in seconds
 ```
 
 `IMusic` instances are heavy on some backends (such as Android), you should usually not have more than about 10 loaded and more than 1 or 2 playing at the same time.
