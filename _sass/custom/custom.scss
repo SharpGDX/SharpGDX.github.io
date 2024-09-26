@@ -4,6 +4,10 @@
     }
 }
 
+.nav-list .nav-list-item.active > .nav-list {
+    border-bottom: 1px solid #44434d;
+}
+
 .highlight .n {
     color: #9cdcfe;
 }
