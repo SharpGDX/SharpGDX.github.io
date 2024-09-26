@@ -16,7 +16,7 @@ Cursor catching is only available on the desktop and GWT backends, and positioni
 
 ## Custom cursor
 
-Changing the cursor to a custom image can be done like so. The following example turns this 32×32 image into a cursor: <a href="/assets/images/cursor-visibility-and-catching1.png?nomagnify" download="badcursor">![Example custom cursor image](/assets/wiki/images/cursor-visibility-and-catching1.png)</a>
+Changing the cursor to a custom image can be done like so. The following example turns this 32&times;32 image into a cursor: <a href="/assets/images/cursor-visibility-and-catching1.png?nomagnify" download="badcursor">![Example custom cursor image](/assets/wiki/images/cursor-visibility-and-catching1.png)</a>
 
 ```java
 Pixmap pixmap = new Pixmap(Gdx.files.internal("badcursor.png"));
@@ -29,7 +29,7 @@ Gdx.graphics.setCursor(cursor);
 
 **Note:** You should call `dispose()` on your cursor if you don't need it anymore.
 
-Only cursors of power-of-two resolutions are supported. For example, if your cursor is 24×24, you must pad it to 32×32. Remember that your cursor may appear small on HDPI monitors if you don't account for them. Custom cursors are supported only on the desktop and GWT backends.
+Only cursors of power-of-two resolutions are supported. For example, if your cursor is 24&times;24, you must pad it to 32&times;32. Remember that your cursor may appear small on HDPI monitors if you don't account for them. Custom cursors are supported only on the desktop and GWT backends.
 
 ## System cursors
 
