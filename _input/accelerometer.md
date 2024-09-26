@@ -5,7 +5,7 @@ nav_order: 2
 ---
 An accelerometer measures the acceleration of a device on three axes (at least on Android). From this acceleration one can derive the tilt or orientation of the device.
 
-Acceleration is measured in meters per second per second (m/s²). If an axis is pointing straight towards the center of the earth, its acceleration will be roughly -10 m/s². If it is pointing in the opposite direction, the acceleration will be 10 m/s².
+Acceleration is measured in meters per second per second (m/s<sup>2</sup>). If an axis is pointing straight towards the center of the earth, its acceleration will be roughly -10 m/s<sup>2</sup>. If it is pointing in the opposite direction, the acceleration will be 10 m/s<sup>2</sup>.
 
 The axes in an Android device are setup as follows:
 
