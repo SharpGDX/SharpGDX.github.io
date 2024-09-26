@@ -33,7 +33,7 @@ collections:
     input:
       permalink: "/:collection/:path/"
       output: true
-    internationalization-and-localization:
+    globalization:
       permalink: "/:collection/:path/"
       output: true
     asset-management:
@@ -80,8 +80,8 @@ just_the_docs:
       input:
         name: Input
         nav_fold: true      
-      internationalization-and-localization:
-        name: Internationalization and Localization
+      globalization:
+        name: Globalization
         nav_fold: true      
       asset-management:
         name: Assets

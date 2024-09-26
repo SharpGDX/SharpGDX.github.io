@@ -1,5 +1,5 @@
 ---
-title: Internationalization and Localization
+title: Globalization
 layout: home
 nav_order: 1
 ---
