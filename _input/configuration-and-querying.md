@@ -7,7 +7,7 @@ Sometimes it is necessary to know which input devices are supported. It is also 
 
 
 ## Disabling Accelerometer & Compass (Android, iOS and Html)
-The [AndroidApplicationConfiguration](https://github.com/libgdx/libgdx/tree/master/backends/gdx-backend-android/src/com/badlogic/gdx/backends/android/AndroidApplicationConfiguration.java) class has a couple of public fields you can set before you hand it of to the `AndroidApplication.initialize()` method.
+The [AndroidApplicationConfiguration](https://github.com/sharpgdx/sharpgdx/tree/master/backends/gdx-backend-android/src/com/badlogic/gdx/backends/android/AndroidApplicationConfiguration.java) class has a couple of public fields you can set before you hand it of to the `AndroidApplication.initialize()` method.
 
 Assuming our game doesn't need the accelerometer and compass, we can disable this input devices as follows:
 
@@ -49,6 +49,6 @@ To check whether a specific input device is available on the platform the applic
    boolean multiTouch = Gdx.input.isPeripheralAvailable(Peripheral.MultitouchScreen);
 ```
 
-Please refer to the [Peripheral](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/Input.java#L560) enumeration to see the rest of the available constants.
+Please refer to the [Peripheral](https://github.com/sharpgdx/sharpgdx/blob/master/gdx/src/com/badlogic/gdx/Input.java#L560) enumeration to see the rest of the available constants.
 
 Note that only a few Android devices have a hardware keyboard. Even if the keyboard is physically present, the user might not have slid it out. The method shown above will return false in this case.

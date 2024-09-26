@@ -73,7 +73,7 @@ If the `fallback` boolean is `true`, Android devices without amplitude control w
 
 ### Preset
 
-libGDX provides three preset vibration intensities:
+SharpGDX provides three preset vibration intensities:
 
 ```java
 Gdx.input.vibrate(Input.VibrationType.LIGHT);
@@ -87,7 +87,7 @@ This method requires at least Android 10 and a device with amplitude control, or
 
 ### Pattern
 
-As of libGDX 1.12.0, vibration patterns, also known as waveforms, are no longer supported. For existing games that use this functionality, you can reimplement this into your `android` module or, for cross-platform support, parse the pattern on a separate thread.
+As of SharpGDX 1.12.0, vibration patterns, also known as waveforms, are no longer supported. For existing games that use this functionality, you can reimplement this into your `android` module or, for cross-platform support, parse the pattern on a separate thread.
 
 ```java
 public void vibrate (long[] pattern, int repeat) {

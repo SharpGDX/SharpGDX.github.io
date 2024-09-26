@@ -113,12 +113,12 @@ You can hover over each row in the table with your mouse to see what the cursors
 	</tr>
 </table>
 
-Note that `NWSEResize` onwards are new in libGDX 1.11.0. They aren't present in earlier versions.
+Note that `NWSEResize` onwards are new in SharpGDX 1.11.0. They aren't present in earlier versions.
 
 ## Additional resources
 
-If you wish to let your HTML5 game use system cursors libGDX doesn't support, this is a good starting point:
+If you wish to let your HTML5 game use system cursors SharpGDX doesn't support, this is a good starting point:
 
 * [CSS `cursor` values](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor#values)
-* [Interfacing with platform specific code](https://libgdx.com/wiki/app/interfacing-with-platform-specific-code)
+* [Interfacing with platform specific code](https://sharpgdx.com/wiki/app/interfacing-with-platform-specific-code)
 * [JSNI](http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsJSNI.html)

@@ -13,7 +13,7 @@ The axes in an Android device are setup as follows:
 
 Unfortunately, this configuration is different for tablets. Android devices have a notion called default orientation. For phones, portrait mode (as in the image above) is the default orientation. For tablets, landscape mode is the default orientation. A default landscape orientation device has its axes rotated, so that the y-axis points up the smaller side of the device and the x-axis points to the right of the wider side.
 
-libGDX takes care of this and presents the accelerometer readings as shown in the image above, no matter the default orientation of the device (positive z-axis comes out of the screen, positive x-axis points to the right along the wider side of the device, positive y-axis points upwards along the smaller side of the device).
+SharpGDX takes care of this and presents the accelerometer readings as shown in the image above, no matter the default orientation of the device (positive z-axis comes out of the screen, positive x-axis points to the right along the wider side of the device, positive y-axis points upwards along the smaller side of the device).
 
 ## Checking Availability
 Different Android devices have different hardware configurations. Checking whether the device has an accelerometer can be done as follows:
@@ -41,7 +41,7 @@ This returns either Orientation.Landscape or Orientation.Portrait.
 
 ## Acceleration Readings
 
-Accelerometer readings can only be accessed via polling in libgdx:
+Accelerometer readings can only be accessed via polling in SharpGDX:
 
 ```java
     float accelX = Gdx.input.getAccelerometerX();
@@ -51,7 +51,7 @@ Accelerometer readings can only be accessed via polling in libgdx:
 
 Platforms or devices that don't have accelerometer support will return zero.
 
-See the [Super Jumper](https://github.com/libgdx/libgdx-demo-superjumper) demo game for a demonstration on the usage of the accelerometer.
+See the [Super Jumper](https://github.com/sharpgdx/sharpgdx-demo-superjumper) demo game for a demonstration on the usage of the accelerometer.
 
 ## Rotation Matrix
 If you want to use the orientation of your device for rendering, it might be beneficial to work with the rotation matrix. See <a href="https://developer.android.com/reference/android/hardware/SensorManager.html#getRotationMatrix(float[], float[], float[], float[])">this link</a> for an explanation. You can plug the resulting matrix directly into your OpenGL rendering:

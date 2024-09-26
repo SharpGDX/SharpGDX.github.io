@@ -60,7 +60,7 @@ The next five methods report mouse/touch events:
 
 Each of the methods returns a `boolean`. We'll look into why that is in the InputMultiplexer section below.
 
-Once you implement your `InputProcessor` you have to tell libGDX about it so it can be called when a new input event arrives:
+Once you implement your `InputProcessor` you have to tell SharpGDX about it so it can be called when a new input event arrives:
 
 ```java
 MyInputProcessor inputProcessor = new MyInputProcessor();

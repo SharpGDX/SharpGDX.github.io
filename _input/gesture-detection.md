@@ -6,7 +6,7 @@ nav_order: 9
 # Gesture Detection
 Touch screens lend themselves well to gesture based input. A gesture could be a pinch with two fingers to indicate the desire to zoom, a tap or double tap, a long press and so on.
 
-libGDX provides a [GestureDetector](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/input/GestureDetector.html) [(source)](https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/input/GestureDetector.java) that lets you detect the following gestures:
+SharpGDX provides a [GestureDetector](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/input/GestureDetector.html) [(source)](https://github.com/sharpgdx/sharpgdx/blob/master/gdx/src/com/badlogic/gdx/input/GestureDetector.java) that lets you detect the following gestures:
 
   * **touchDown**: A user touches the screen.
   * **longPress**: A user touches the screen for some time.
