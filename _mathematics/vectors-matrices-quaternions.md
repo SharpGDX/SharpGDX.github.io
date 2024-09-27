@@ -4,6 +4,9 @@ layout: home
 nav_order: 4
 ---
 
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 SharpGDX has several linear algebra classes for dealing with common tasks in physics and applied math. These include:
 
   * *[Vector](https://en.wikipedia.org/wiki/Euclidean_vector)*

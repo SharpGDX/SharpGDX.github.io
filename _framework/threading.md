@@ -3,6 +3,10 @@ title: Threading
 layout: home
 nav_order: 7
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 All of the `ApplicationListener` methods are called on the same thread. This thread is the rendering thread on which OpenGL calls can be made. For most games it is sufficient to implement both logic updates and rendering in the `ApplicationListener.render()` method, and on the rendering thread.
 
 Any graphics operations directly involving OpenGL need to be executed on the rendering thread. Doing so on a different thread results in undefined behaviour. This is due to the OpenGL context only being active on the rendering thread. Making the context current on another thread has its problems on a lot of Android devices, hence it is unsupported.

@@ -3,6 +3,10 @@ title: Accelerometer
 layout: home
 nav_order: 2
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 An accelerometer measures the acceleration of a device on three axes (at least on Android). From this acceleration one can derive the tilt or orientation of the device.
 
 Acceleration is measured in meters per second per second (m/s<sup>2</sup>). If an axis is pointing straight towards the center of the earth, its acceleration will be roughly -10 m/s<sup>2</sup>. If it is pointing in the opposite direction, the acceleration will be 10 m/s<sup>2</sup>.

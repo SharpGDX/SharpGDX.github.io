@@ -4,6 +4,9 @@ layout: home
 nav_order: 2
 ---
 
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 SharpGDX has several geometric classes for dealing with shapes, areas, and volumes. These include:
 
   * *[Circle](https://en.wikipedia.org/wiki/Circle)*

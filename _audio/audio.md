@@ -3,6 +3,10 @@ title: Audio
 layout: home
 nav_order: 1
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 # Introduction
 
 SharpGDX provides methods to playback small sound effects as well as stream larger music pieces directly from disk. It also provides convenient read and write access to the audio hardware.

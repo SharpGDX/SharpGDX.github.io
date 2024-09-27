@@ -3,6 +3,10 @@ title: Gesture Detection
 layout: home
 nav_order: 9
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 # Gesture Detection
 Touch screens lend themselves well to gesture based input. A gesture could be a pinch with two fingers to indicate the desire to zoom, a tap or double tap, a long press and so on.
 

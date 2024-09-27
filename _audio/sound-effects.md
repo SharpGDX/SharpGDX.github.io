@@ -3,6 +3,10 @@ title: Sound Effects
 layout: home
 nav_order: 4
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 Sound effects are small audio samples, usually no longer than a few seconds, that are played back on specific game events such as a character jumping or shooting a gun.
 
 Sound effects can be stored in various formats, including MP3, OGG and WAV. Which format you should use, depends on your specific needs, as each format has its own advantages and disadvantages. For example, WAV files are quite large compared to other formats, OGG files don't work on RoboVM (iOS) nor with Safari (GWT), and MP3 files have issues with seemless looping.

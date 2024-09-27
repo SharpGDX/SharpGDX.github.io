@@ -3,6 +3,10 @@ title: Back and Menu Key Catching
 layout: home
 nav_order: 3
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 When a user presses the back button on an Android device, this usually kills the currently running activity. Games might chose to display a confirmation dialog before letting the user exit. For that to work one needs to catch the back key so it is not passed on to the operating system:
 
 ```java

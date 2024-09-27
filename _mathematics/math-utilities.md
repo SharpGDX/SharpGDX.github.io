@@ -4,6 +4,9 @@ layout: home
 nav_order: 1
 ---
 
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 The [Mathematics](https://github.com/sharpgdx/sharpgdx/tree/master/gdx/src/com/badlogic/gdx/math) package contains various useful classes for dealing with problems in geometry, linear algebra, collision detection, interpolation, and common unit conversions.
 
 ## Math Utils

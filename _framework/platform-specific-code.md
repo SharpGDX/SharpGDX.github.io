@@ -3,6 +3,10 @@ title: Interfacing with platform specific code
 layout: home
 nav_order: 8
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 Oftentimes it can become necessary to access platform specific APIs, e.g., adding advertisement services or a leaderboard functionality which are only available for Android/iOS/desktop. This can be achieved by allowing a specific implementation to be defined through a common API interface.
 
 Take the following example, which tries to use a very simple leaderboard API that is only available on Android. For other targets we simply want to log invocations or provide mock return values.

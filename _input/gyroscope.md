@@ -3,6 +3,10 @@ title: Gyroscope
 layout: home
 nav_order: 10
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 Some Android devices have a gyroscope sensor that provides information about the rate of rotation in rad/s around a device's x, y, and z axis.
 
 NOTE: The gyroscope is currently not available on iOS devices since there is no implementation in the RoboVM - backend yet.

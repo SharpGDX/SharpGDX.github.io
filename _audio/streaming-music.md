@@ -3,6 +3,10 @@ title: Streaming Music
 layout: home
 nav_order: 5
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 For any sound that's longer than a few seconds it is preferable to stream it from disk instead of fully loading it into RAM. SharpGDX provides an IMusic interface that lets you do that.
 
 To load an IMusic instance we can do the following:

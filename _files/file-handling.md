@@ -3,6 +3,10 @@ title: File Handling
 layout: home
 nav_order: 1
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 * [Introduction](#introduction)
 * [Platform Filesystems](#platform-filesystems)
 * [File (Storage) Types](#file-storage-types)

@@ -3,6 +3,10 @@ title: Vibrator
 layout: home
 nav_order: 14
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 While not strictly an input device, it nevertheless is a kind of peripheral. We felt it belonged in the input model.
 
 The vibrator allows you to vibrate the user's mobile device. This can be used to provide feedback to the user in addition to or instead of sound effects.

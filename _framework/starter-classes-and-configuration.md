@@ -3,6 +3,10 @@ title: Starter Classes and Configuration
 layout: home
 nav_order: 4
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 * [Desktop (LWJGL3)](#desktop-lwjgl3)
 
 For each target platform, a starter class has to be written. This class instantiates a back-end specific `IApplication` implementation and the `IApplicationListener` that implements the application logic. The starter classes are platform-dependent, so let's have a look at how to instantiate and configure these for each backend.

@@ -3,6 +3,10 @@ title: Mouse, Touch and Keyboard
 layout: home
 nav_order: 11
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 The main input devices SharpGDX supports are the mouse on the desktop/browser, touch screens on Android and keyboards. Let's review how SharpGDX abstracts those.
 
 ## Keyboard

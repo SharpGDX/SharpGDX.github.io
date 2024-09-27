@@ -4,6 +4,9 @@ layout: home
 nav_order: 2
 ---
 
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 The [IPath interface](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/math/Path.html) [(code)](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/math/Path.html) has implementations that allows you to traverse smoothly through a set of defined points (in some cases, tangents too).
 
 Paths can be defined to be bi-dimensional or tri-dimensional, because it is a template that takes a derived of the Vector class, thus you can either use it with a set of Vector2's or Vector3's.

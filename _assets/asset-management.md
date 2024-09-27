@@ -3,6 +3,10 @@ title: Asset Management
 layout: home
 nav_order: 1
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 ### Why would I want to use the AssetManager
 
 [AssetManager](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/assets/AssetManager.html) [(code)](https://github.com/sharpgdx/sharpgdx/blob/master/gdx/src/com/badlogic/gdx/assets/AssetManager.java) helps you load and manage your assets. It is the recommended way to load your assets, due to the following nice behaviors:

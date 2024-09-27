@@ -3,6 +3,10 @@ title: Globalization
 layout: home
 nav_order: 1
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 ## Overview
 
 Technically speaking, _internationalization_ is the process of designing a software so that it can potentially be adapted to various languages and regions without engineering changes.

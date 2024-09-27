@@ -3,6 +3,10 @@ title: Life Cycle
 layout: home
 nav_order: 2
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 A SharpGDX application has a well defined life-cycle, governing the states of an application, like creating, pausing and resuming, rendering and disposing the application.
 
 ## IApplicationListener

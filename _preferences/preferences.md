@@ -3,7 +3,7 @@ title: Preferences
 layout: home
 nav_order: 1
 ---
-Preferences are a simple way to store small data for your application, e.g. user settings, small game state saves and so on. Preferences work like a hash map, using strings as keys, and various primitive types as values. *Preferences are also the only way to date to write persistent data when your application is run in the browser*.
+Preferences are a simple way to store small data for your application, e.g. user settings, small game state saves and so on. Preferences work like a dictionary, using strings as keys, and various primitive types as values.
 
 
 ## Obtaining a Preferences instance
@@ -16,7 +16,7 @@ var prefs = GDX.App.GetPreferences("My Preferences");
 Note that your application can have multiple preferences, just give them different names.
 
 ## Writing And Reading Values
-Modifying preferences is as simple as modifying a Java Map:
+Modifying preferences is as simple as modifying a dictionary:
 
 ```csharp
 prefs.PutString("name", "Donald Duck");
@@ -48,7 +48,3 @@ On Windows, Linux, and OS X, preferences are stored in an xml file within the us
 The file is named whatever you passed to `GDX.App.GetPreferences()`.
 
 This is useful to know if you want to change or delete them manually for testing.
-
-On Android, the system's [SharedPreferences](https://developer.android.com/reference/android/content/SharedPreferences) class is used. This means preferences will survive app updates, but are deleted when the app is uninstalled.
-
-On iOS, an NSMutableDictionary will be written to the given file. [per [javadocs](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/Preferences.html)]

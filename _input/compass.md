@@ -3,6 +3,10 @@ title: Compass
 layout: home
 nav_order: 4
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 Some Android devices and iOS devices have an integrated magnetic field sensor that provides information on how the device is oriented with respect to the magnetic north pole.
 
 NOTE: The compass is currently not available on iOS devices since there is no implementation in the RoboVM - backend yet. The compass appears to be present with the Intel MOE backend on iOS.

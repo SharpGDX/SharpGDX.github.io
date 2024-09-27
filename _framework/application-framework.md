@@ -3,6 +3,10 @@ title: Application Framework
 layout: home
 nav_order: 1
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 ## Modules
 At its core, SharpGDX consists of six [modules](/wiki/app/modules-overview) in the form of interfaces that provide means to interact with the operating system. Each backend implements these interfaces.
 

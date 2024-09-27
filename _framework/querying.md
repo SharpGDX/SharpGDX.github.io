@@ -3,6 +3,10 @@ title: Querying
 layout: home
 nav_order: 5
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 The `Application` interface provides various methods to query properties of the run-time environment.
 
 ### Getting the Application Type

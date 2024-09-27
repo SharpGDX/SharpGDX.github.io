@@ -3,6 +3,10 @@ title: Configuration and Querying
 layout: home
 nav_order: 5
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 Sometimes it is necessary to know which input devices are supported. It is also often the case that your game does not need the full range of input devices supported, e.g. you might not need the accelerometer or compass. It is good practice to disable those input devices in that case to preserve battery on Android. The following sections will show you how to perform these actions.
 
 

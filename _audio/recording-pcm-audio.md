@@ -3,6 +3,10 @@ title: Recording PCM Audio
 layout: home
 nav_order: 3
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 You can access PCM data from the microphone on a PC or Android phone via the [AudioRecorder](https://javadoc.io/doc/com.badlogicgames.gdx/gdx/latest/com/badlogic/gdx/audio/AudioRecorder.html) [(code)](https://github.com/sharpgdx/sharpgdx/blob/master/gdx/src/com/badlogic/gdx/audio/AudioRecorder.java) interface. To create an instance of that interface use:
 
 ```java

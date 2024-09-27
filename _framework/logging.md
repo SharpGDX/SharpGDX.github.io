@@ -3,6 +3,10 @@ title: Logging
 layout: home
 nav_order: 6
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 The `IApplication` interface provides simple logging facilities that give granular control over which messages should be logged.
 
 A message can be a normal **info message**, an **error message** with an optional exception or a **debug message**:

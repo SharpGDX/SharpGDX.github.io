@@ -3,6 +3,10 @@ title: Modules
 layout: home
 nav_order: 3
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 ## Introduction
 
 SharpGDX comprises several modules that provide services for each step of a typical game architecture.

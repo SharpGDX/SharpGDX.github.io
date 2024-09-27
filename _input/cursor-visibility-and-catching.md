@@ -3,6 +3,10 @@ title: Cursor Visibility and Catching
 layout: home
 nav_order: 7
 ---
+
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 ## Cursor catching
 
 For some games like first-person shooters, it is often necessary to catch the cursor so it stays in the center of the screen, and only use position deltas to rotate the camera. Other times we might want to position the cursor manually. Both things can be done as follows:

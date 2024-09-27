@@ -5,6 +5,9 @@ layout: home
 nav_order: 0
 ---
 
+{: .important }
+> This is a copy of the Java documentation for libGDX. It is not finished being ported.
+
 If this is your first time using SharpGDX, you're at the right place. The following steps detail how you can get your first SharpGDX project up and running.
 
 Before you can get started with SharpGDX, you need to set up an IDE (Integrated Development Environment). It is basically an editor for your code files, which makes developing applications considerably more convenient in various ways. **If you already have an IDE installed, you can skip to the next [step](/documentation/start/project-generation).**
