@@ -67,7 +67,7 @@ A file in SharpGDX is represented by an instance of the [FileHandle](https://git
 | *Type* | *Description, file path and features* | *Desktop* | *Android* | *HTML5* | *iOS* |
 |:------:|:--------------------------------------|:---------:|:---------:|:-------:|:-----:|
 | Classpath | Classpath files are directly stored in your source folders. These get packaged with your jars and are always *read-only*. They have their purpose, but should be avoided if possible. | Yes | Yes | No | Yes |
-| Internal | Internal files are relative to the application’s *root* or *working* directory on desktops, relative to the *assets* directory on Android, and relative to the `core/assets/` directory of your GWT project. These files are *read-only*. If a file can't be found on the internal storage, the file module falls back to searching the file on the classpath. This is necessary if one uses the asset folder linking mechanism of Eclipse, see [Project Setup](/wiki/start/project-generation). Relative paths (`./` or `../`) are not always supported and thus shouldn't be used. | Yes | Yes | Yes | Yes |
+| Internal | Internal files are relative to the application's *root* or *working* directory on desktops, relative to the *assets* directory on Android, and relative to the `core/assets/` directory of your GWT project. These files are *read-only*. If a file can't be found on the internal storage, the file module falls back to searching the file on the classpath. This is necessary if one uses the asset folder linking mechanism of Eclipse, see [Project Setup](/wiki/start/project-generation). Relative paths (`./` or `../`) are not always supported and thus shouldn't be used. | Yes | Yes | Yes | Yes |
 | Local | Local files are stored relative to the application's *root* or *working* directory on desktops and relative to the internal (private) storage of the application on Android. Note that Local and internal are mostly the same on the desktop. | Yes | Yes | No | Yes |
 | External| External files paths are relative to the [home directory](https://www.roseindia.net/java/beginners/UserHomeExample.shtml) of the current user on desktop systems. On Android, the app-specific external storage is used. | Yes | Yes | No | Yes |
 | Absolute | Absolute files need to have their fully qualified paths specified. <br/>*Note*: For the sake of portability, this option must be used only when absolutely necessary | Yes | Yes | No | Yes |
@@ -114,7 +114,7 @@ The `myfile.txt` file is located in the directory where the compiled classes res
 FileHandle handle = Gdx.files.external("myfile.txt");
 ```
 
-In this case, `myfile.txt` needs to be in the users’ [home directory](https://en.wikipedia.org/wiki/Home_directory) (`/home/<user>/myfile.txt` on Linux, `/Users/<user>/myfile.txt` on macOS and `C:\Users\<user>\myfile.txt` on Windows) on desktop, and in the root of the SD card on Android.
+In this case, `myfile.txt` needs to be in the users' [home directory](https://en.wikipedia.org/wiki/Home_directory) (`/home/<user>/myfile.txt` on Linux, `/Users/<user>/myfile.txt` on macOS and `C:\Users\<user>\myfile.txt` on Windows) on desktop, and in the root of the SD card on Android.
 
 ```java
 FileHandle handle = Gdx.files.absolute("/some_dir/subdir/myfile.txt");
