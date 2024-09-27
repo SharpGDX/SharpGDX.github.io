@@ -11,7 +11,9 @@ When dealing with different screens it is often necessary to decide for a certai
 
 If you have never worked with viewports before, **be sure to check out this comprehensive introduction:**
 
-{% include video id="8N2vw_3h9HU" provider="youtube" %}
+<div class="responsive-video-container">
+    <div class="fluid-width-video-wrapper" style="padding-top: 56.25%;"><iframe src="https://www.youtube-nocookie.com/embed/8N2vw_3h9HU" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid0"></iframe></div>
+  </div>
 
 There is also a transcript of this video available [here](https://github.com/raeleus/viewports-sample-project#libgdx-viewports). If you are having trouble picking the right viewport for your situation, the **interactive examples** [here](https://raeleus.github.io/viewports-sample-project/) and [here](https://crykn.github.io/viewports-showcase/) will most certainly prove useful.
 
