@@ -115,10 +115,10 @@ Declare your variables at the top of the file right underneath the `public class
 public class Main : IApplicationListener
 {
     private Texture _backgroundTexture = null!;
-    private Texture _bucketTexture     = null!;
-    private ISound  _dropSound         = null!;
-    private Texture _dropTexture       = null!;
-    private IMusic  _music             = null!;
+    private Texture _bucketTexture = null!;
+    private ISound  _dropSound = null!;
+    private Texture _dropTexture = null!;
+    private IMusic  _music = null!;
 ```
 
 However, you should not create these objects at the constructor or init level. This would fail because SharpGDX needs to load first. Enter the following code while implementing th create method:
@@ -166,7 +166,7 @@ public class Main : ApplicationListener
     ...
 
     private SpriteBatch _spriteBatch = null!;
-    private FitViewport _viewport    = null!;
+    private FitViewport _viewport = null!;
 ```
 
 Initialize these variables in the create method:
@@ -558,7 +558,7 @@ Now to spawn the rain drops. We will have more than one raindrop, so we need a l
 public class Main : IApplicationListener
 {
     ...
-    private Array<Sprite> _dropSprites       = null!;
+    private Array<Sprite> _dropSprites = null!;
 ```
 
 Initialize the list:
@@ -814,8 +814,8 @@ We have made great progress, however the drops don't interact with the bucket. T
 public class Main : IApplicationListener
 {
     ...
-    private Rectangle     _bucketRectangle   = null!;
-    Rectangle             _dropRectangle     = null!;
+    private Rectangle _bucketRectangle = null!;
+    Rectangle _dropRectangle = null!;
 ```
 
 ```csharp
@@ -964,19 +964,19 @@ namespace Drop;
 
 public class Main : IApplicationListener
 {
-    private Texture       _backgroundTexture = null!;
-    private Rectangle     _bucketRectangle   = null!;
-    private Sprite        _bucketSprite      = null!;
-    private Texture       _bucketTexture     = null!;
-    private Rectangle     _dropRectangle     = null!;
-    private ISound        _dropSound         = null!;
-    private Array<Sprite> _dropSprites       = null!;
-    private Texture       _dropTexture       = null!;
-    private float         _dropTimer         = 0.0f;
-    private IMusic        _music             = null!;
-    private SpriteBatch   _spriteBatch       = null!;
-    private Vector2       _touchPos          = null!;
-    private FitViewport   _viewport          = null!;
+    private Texture _backgroundTexture = null!;
+    private Rectangle _bucketRectangle = null!;
+    private Sprite _bucketSprite = null!;
+    private Texture _bucketTexture = null!;
+    private Rectangle _dropRectangle = null!;
+    private ISound _dropSound = null!;
+    private Array<Sprite> _dropSprites = null!;
+    private Texture _dropTexture = null!;
+    private float _dropTimer = 0.0f;
+    private IMusic _music = null!;
+    private SpriteBatch _spriteBatch = null!;
+    private Vector2 _touchPos = null!;
+    private FitViewport _viewport = null!;
 
     public void Create()
     {
