@@ -33,4 +33,4 @@ It is possible to develop sharpGDX applications entirely without an iDE, just us
 
 <br/>
 
-**Now that you have a development environment, you can create your very first SharpGDX project. SharpGDX offers templates and NuGet packages for that, which makes getting started easy. To get started with it, take a look [here](/_getting_started/project-generation).**
+**Now that you have a development environment, you can create your very first SharpGDX project. SharpGDX offers templates and NuGet packages for that, which makes getting started easy. To get started with it, take a look [here](/-getting-started/project-generation).**
