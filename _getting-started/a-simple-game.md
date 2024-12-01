@@ -1,7 +1,7 @@
 ---
 title: "A Simple Game"
 layout: home
-nav_order: 0
+nav_order: 3
 ---
 
 Let's make a game! Game design is hard, but if you break up the process into small, achievable goals, you'll be able to produce wonders. In this simple game tutorial, you will learn how to make a basic game from scratch. These are the essential skills that you will build on in future projects.

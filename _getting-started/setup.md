@@ -36,8 +36,7 @@ There are several IDEs available for C# development, the most common being Visua
 
 ## 4. No IDE
 
-{: .notice--info}
-> It is possible to develop sharpGDX applications entirely without an iDE, just using a simple editor like Notepad. This approach is **not** recommended, and will not be outlined here.
+It is possible to develop sharpGDX applications entirely without an iDE, just using a simple editor like Notepad. This approach is **not** recommended, and will not be outlined here.
 
 
 <br/>
